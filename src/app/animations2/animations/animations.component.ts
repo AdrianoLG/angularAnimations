@@ -55,16 +55,6 @@ export class AnimationsComponent2 implements OnInit {
     this.isTransform = false;
   }
 
-  onAnimationEvent ( event: AnimationEvent ) {
-    console.group(`${event.triggerName}`);
-    console.warn(`Phase: ${event.phaseName}`);
-    console.warn(`Total time: ${event.totalTime}`);
-    console.warn(`From: ${event.fromState}`);
-    console.warn(`To: ${event.toState}`);
-    console.warn(`Element: ${event.element}`);
-    console.groupEnd();
-  }
-
   toggle() {
     this.isAnimate = !this.isAnimate;
     this.isTransform = !this.isTransform;

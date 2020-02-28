@@ -23,7 +23,6 @@ export class AppComponent implements OnInit{
           navbaritem.classList.remove('is-active');
           if (navbaritem.textContent.toLowerCase().trim().replace(' ', '') == url) {
             navbaritem.classList.add('is-active');
-            console.log(navbaritem);
           }
         });
       }
