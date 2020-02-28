@@ -24,6 +24,26 @@ export class HomeComponent implements OnInit {
       this.i = this.i - 1;
       if (this.i >= this.total) {
         this.moveDog();
+      } else {
+        console.log('MoveDog else');
+        this.i = 747;
+        this._renderer.setStyle(this.dog.nativeElement, 'transform', 'translateX(-844%)');
+        this.moveDogInverted();
+      }
+    }, 20);
+  }
+
+  moveDogInverted() {
+    setTimeout(() => {
+      this._renderer.setStyle(this.dog.nativeElement, 'transform', `translateX(${this.iI}%) scaleX(-1)`);
+      this.iI = this.iI + 1;
+      if (this.iI < this.iTotal) {
+        this.moveDogInverted();
+      } else {
+        console.log('MoveDogInverted else');
+        this.iI = -844;
+        this._renderer.setStyle(this.dog.nativeElement, 'transform', 'translateX(747%)');
+        this.moveDog();
       }
     }, 20);
   }
