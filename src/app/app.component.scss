@@ -1,0 +1,33 @@
+h1.title {
+   bottom: .1em;
+   margin-bottom: 0;
+   position: relative;
+   a {
+      color: #4a4a4a;
+   }
+}
+nav {
+   background: #b8d1ff;
+}
+a.navbar-item.is-active:not(:focus):not(:hover),
+.navbar-link.is-active:not(:focus):not(:hover),
+a.navbar-item.is-active,
+.navbar-link.is-active {
+   background-color: #2270ff;
+   color: white;
+}
+.navbar {
+   align-items: center;
+}
+.navbar > .container .navbar-brand {
+   margin-left: 0;
+}
+.navbar-brand {
+   align-items: center;
+}
+.navbar-menu {
+   align-items: center;
+}
+.padTB {
+   padding: 1.5em 0;
+}

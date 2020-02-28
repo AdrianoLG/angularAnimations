@@ -1,0 +1,6 @@
+<div [@animateIt]="isAnimate ? 'animate' : 'normal'" class="animateIt"
+      (@animateIt.start)="onAnimationEvent($event)"
+      (@animateIt.done)="onAnimationEvent($event)">
+   <p>{{ isAnimate ? 'Circle' : 'Square' }}</p>
+</div>
+<button (click)="toggle()">Animate it!</button>

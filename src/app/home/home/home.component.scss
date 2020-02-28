@@ -1,0 +1,13 @@
+div {
+   position: relative;
+}
+.bg {
+   width: 100%;
+}
+.dog {
+   left: 50%;
+   position: absolute;
+   top: 50%;
+   transform: translate(747%,-50%);
+   width: 5em;
+}
