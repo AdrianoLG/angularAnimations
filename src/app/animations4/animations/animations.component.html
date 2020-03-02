@@ -2,13 +2,13 @@
    <div class="tasks">
       <div class="field">
          <div class="control" [@focusInput]='state'>
-           <input class="input" type="text" placeholder="Add task" on-focus="toggleFocus('in')" on-focusout="toggleFocus('out')" (keyup.enter)="addTask($event)">
+           <input class="input" type="text" placeholder="Add task" on-focus="toggleFocus()" on-focusout="toggleFocus()" (keyup.enter)="addTask($event)">
            <p [@note]='state'>Press enter to add task</p>
          </div>
       </div>
-      <div class="card" *ngFor="let task of tasks">
+      <div class="card" *ngFor="let task of tasks; let i = index" [attr.data-index]="i" [@addTask]='state'>
          <div class="card-content">
-            <button class="delete"></button>
+            <button class="delete" (click)="removeTask(i)"></button>
             {{ task }}
          </div>
       </div>
